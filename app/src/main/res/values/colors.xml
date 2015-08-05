@@ -5,16 +5,21 @@
     <color name="grey_light">#EAEAEA</color>
     <color name="grey">#dcdcdc</color>
     <color name="grey_dark">@android:color/darker_gray</color>
+    <color name="grey_darker">#666666</color>
     <color name="grey_darkest">#444444</color>
     <color name="black">#222222</color>
     <color name="green">#339554</color>
     <color name="green_light">#ff31cb37</color>
     <color name="green_dark">#24683B</color>
     <color name="orange">#FF9900</color>
+    <color name="material_orange_700">#f57c00</color>
     <color name="red">#FF3333</color>
-    <color name="purple_dark">#6c5170</color>
+    <color name="material_red_a700">#d50000</color>
+    <color name="purple_dark">#5e35b1</color>
+    <color name="purple_darker">#512da8</color>
 
     <color name="brand_primary">@color/purple_dark</color>
+    <color name="brand_primary_dark">@color/purple_darker</color>
     <color name="brand_secondary">@color/green</color>
     <color name="brand_secondary_dark">@color/green_dark</color>
 
@@ -32,4 +37,5 @@
 
     <color name="tab_selected">@color/white</color>
     <color name="tab_highlight">#aaaaaaaa</color>
+
 </resources>

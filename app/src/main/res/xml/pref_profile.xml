@@ -11,24 +11,29 @@
         android:selectAllOnFocus="true"
         android:singleLine="true"
         android:title="@string/pref_title_nickname" />
-    
+
     <Preference
         android:defaultValue="@string/pref_default_password"
         android:key="password"
         android:singleLine="true"
         android:title="@string/pref_title_password"/>
-    
+
     <!-- NOTE: Hide buttons to simplify the UI. Users can touch outside the dialog to
          dismiss it. -->
     <!-- NOTE: ListPreference's summary should be set to its value by the activity code. -->
     <ListPreference
+        android:key="status"
         android:defaultValue="1"
         android:entries="@array/pref_status_list_titles"
         android:entryValues="@array/pref_status_list_values"
-        android:key="status"
         android:negativeButtonText="@null"
         android:positiveButtonText="@null"
         android:title="@string/pref_title_status" />
+
+    <Preference
+        android:key="avatar"
+        android:editable="false"
+        android:title="@string/pref_title_avatar" />
 
     <EditTextPreference
         android:defaultValue="@string/pref_default_status_message"
@@ -54,12 +59,24 @@
         android:textIsSelectable="true"
         android:title="@string/pref_title_tox_id" />
 
+    <CheckBoxPreference
+        android:defaultValue="true"
+        android:key="logging_enabled"
+        android:title="@string/pref_title_logging_enabled" />
+
+    <Preference
+        android:defaultValue="@color/brand_primary"
+        android:key="theme_color"
+        android:editable="false"
+        android:singleLine="true"
+        android:title="@string/pref_title_theme_color" />
+
+    <Preference
+        android:key="nospam"
+        android:title="@string/pref_nospam" />
+
     <Preference
         android:key="export"
         android:title="@string/pref_title_export" />
-
-    <Preference
-        android:key="logout"
-        android:title="@string/pref_title_logout" />
 
 </PreferenceScreen>

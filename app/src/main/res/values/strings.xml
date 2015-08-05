@@ -4,12 +4,13 @@
     <string name="app_name" translatable="false">Antox</string>
 
     <!-- Activity titles -->
-    <string name="title_activity_add_friend">Add Friend</string>
+    <string name="title_activity_add">Add Contact</string>
     <string name="title_activity_friend_profile">Friend Profile</string>
+    <string name="title_activity_group_profile">Group Info</string>
     <string name="title_activity_profile_settings">Profile options</string>
 
     <!-- Navigation / Action Bar -->
-    <string name="add_friend">Add Friend</string>
+    <string name="add_contact">Add Contact</string>
 
     <!-- Login Activity -->
     <string name="login_must_fill_in">You must fill in a profile name</string>
@@ -33,6 +34,9 @@
     <string name="create_account_internal_error">Internal Antox Error. Please restart and try again</string>
     <string name="create_account_reached_registration_limit">You can only register 13 accounts an hour. You have reached this limit</string>
     <string name="create_account_unknown_error">Unknown registration error, please try again later</string>
+    <string name="create_account_kalium_link_error">Failed to load a required library. Unable to create non-incognito accounts</string>
+    <string name="create_account_encrypted_profile_error">Antox does not support encrypted profiles yet</string>
+    <string name="create_account_load_profile_unknown">Unknown error loading profile</string>
 
     <!-- Main Activity -->
     <string name="main_no_active_chat">No active chat. Start one by choosing a friend from the pane on the left.</string>
@@ -40,14 +44,21 @@
     <string name="main_no_internet">No Internet Connection</string>
     <string name="main_not_connected">No internet connection has been detected. Without an internet connection, you will have
         limited functionality unless you are using Antox for LAN only</string>
+    <string name="main_mobile_disabled">Currently offline as Wi-Fi only mode is enabled. Touch to open settings. </string>
     <string name="search_all_contacts">Search all contacts</string>
+    <string name='main_group_coming_soon'>"Coming soon…"</string>
 
     <!-- Chat Activity -->
     <string name="chat_enter_message">Send a message</string>
     <string name="chat_file_transfer">File transfer</string>
     <string name="chat_message_too_long">This message is too long and cannot be sent</string>
+    <string name="chat_ft_failed_friend_offline">Sending failed - cannot send file to offline friend</string>
 
-    <!-- Add Friend Activity -->
+    <!-- Add Pane Fragment -->
+    <string name="addpane_friend_label">Friend</string>
+    <string name="addpane_group_label">Group</string>
+
+    <!-- Add Friend Fragment -->
     <string name="addfriend_friend_key">Your friend\'s Tox ID</string>
     <string name="addfriend_friend_message">Send a message with your request</string>
     <string name="addfriend_button">Add Friend</string>
@@ -64,6 +75,15 @@
     <string name="addfriend_friend_pin_text">Enter Friend\'s Pin</string>
     <string name="addfriend_default_message">Hey! Please accept my friend request</string>
 
+    <!-- Add Group Fragment -->
+    <string name="addgroup_group_id">The group\'s ID</string>
+    <string name="addgroup_button">Join Group</string>
+    <string name="addgroup_group_added">Group Joined</string>
+    <string name="addgroup_group_exists">Group already exists</string>
+    <string name="invalid_group_ID">Invalid Group ID</string>
+    <string name="addgroup_alias_hint">Set an alias for this group</string>
+    <string name="addgroup_optional_title">Optional Extras</string>
+
     <!-- Friend Profile Activity -->
     <string name="friend_profile_nick">Nickname</string>
     <string name="friend_profile_key">Tox ID</string>
@@ -72,11 +92,20 @@
     <string name="friend_profile_updated">The profile has been updated</string>
     <string name="friend_profile_copied">Tox ID Copied</string>
 
+    <!-- Group Profile Activity -->
+    <string name="group_profile_peer_list_head">Participants</string>
+
     <!-- Friend request fragment -->
     <string name="friend_profile_title">%1$s\'s Profile</string>
     <string name="friendrequest_accept">Accept</string>
     <string name="friendrequest_reject">Reject</string>
     <string name="friend_request">New Friend Request</string>
+
+    <!-- Group invite fragment -->
+    <string name="groupinvite_accept">Accept</string>
+    <string name="groupinvite_reject">Reject</string>
+    <string name="group_invite">New Group Invite</string>
+    <string name="invited_by">You were invited by </string>
 
     <!-- Contacts Fragment -->
     <string name="friend_action_profile">Profile</string>
@@ -84,8 +113,12 @@
     <string name="friend_action_export_chat">Export Chat Logs</string>
     <string name="friend_action_delete_chat">Delete Chat Logs</string>
     <string name="friend_action_block">Block</string>
+    <string name="group_default_peer_name">Anonymous</string>
+    <string name="group_action_delete">Leave Group</string>
     <string name="contacts_actions_on">Actions on</string>
     <string name="contacts_delimiter_requests">Requests</string>
+    <string name="contacts_delimiter_invites">Group Invites</string>
+    <string name="contacts_delimiter_groups">Groups</string>
     <string name="contacts_delimiter_friends">Friends</string>
     <string name="contacts_delimiter_offline">Offline</string>
     <string name="contacts_delimiter_online">Online</string>
@@ -104,6 +137,26 @@
     <!-- Block Friend Dialog -->
     <string name="friend_action_block_friend_confirmation">Blocking this user will remove them from your friends list and you will no longer see friend
         requests from them.\n\nAre you sure you wish to continue?</string>
+
+    <!-- Reset ToxID Dialog -->
+    <string name="reset_tox_id_dialog_message">Resetting your Tox ID changes your ID permanently. You will
+        keep your current contacts list, but other people won\'t be able to add you using your old ID. </string>
+    <string name="reset_tox_id_dialog_title">Confirm Tox ID Reset</string>
+    <string name="reset_tox_id_dialog_confirm">Reset ID</string>
+    <string name="reset_tox_id_dialog_cancel">Cancel</string>
+    <string name="tox_id_reset">Your Tox ID has been reset</string>
+
+    <!-- Create Group Dialog -->
+    <string name="create_group_dialog_message">Create a new Group Chat</string>
+    <string name="create_group_dialog_create_group">Create Group</string>
+    <string name="create_group_dialog_cancel">Cancel</string>
+    <string name="create_group_dialog_name_header">Group Name</string>
+
+    <!-- Group Chat Delete -->
+    <string name="group_default_part_message">Goodbye</string>
+
+    <!-- Color Picker Dialog -->
+    <string name="dialog_color_picker_title">Select theme color</string>
 
     <!-- Chat Fragment -->
     <string name="attachment_photo">Attach photo</string>
@@ -131,6 +184,21 @@
     <string name="title_activity_create_account">CreateAccountActivity</string>
     <string name="action_settings">Settings</string>
 
+    <!-- Avatar Dialog -->
+    <string name="dialog_avatar_take_photo">Take Photo</string>
+    <string name="dialog_avatar_use_file">Use File</string>
+    <string name="avatar_too_large_error">Error: Avatar file too large.</string>
+    <string name="no_camera_intent_error">Error: No valid camera application found.</string>
+    <string name="dialog_avatar_description">avatar</string>
+
+    <!-- File transfer -->
+    <string name="file_finished">Finished</string>
+    <string name="file_failed">Failed</string>
+    <string name="file_in_progress">In Progress</string>
+    <string name="file_request_sent">Sent Request</string>
+    <string name="file_rejected">Rejected</string>
+    <string name="file_time_remaining">%s seconds left</string>
+
     <!-- QR -->
     <string name="qr_default_title">Install Barcode Scanner?</string>
     <string name="qr_default_message">This application requires Barcode Scanner. Would you like to install it?</string>
@@ -138,13 +206,13 @@
     <string name="qr_button_no">No</string>
 
     <!-- nav bar -->
-    <string name="n_settings">SETTINGS</string>
-    <string name="n_profile_options">PROFILE</string>
-    <string name="n_create_group">CREATE GROUP</string>
-    <string name="n_add_person">ADD PERSON</string>
-    <string name="n_about">ABOUT</string>
-    <string name="n_open_source">OPEN SOURCE LICENSE</string>
-    <string name="n_logout">LOGOUT</string>
+    <string name="n_settings">Settings</string>
+    <string name="n_profile_options">Profile</string>
+    <string name="n_create_group">Create Group</string>
+    <string name="n_add_person">Add Person</string>
+    <string name="n_about">About</string>
+    <string name="n_open_source">Open Source License</string>
+    <string name="n_logout">Logout</string>
     <string name="drawer_open">Open navigation drawer</string>
     <string name="drawer_close">Close navigation drawer</string>
     <string name="open_source_license">Open source license</string>
@@ -154,13 +222,16 @@
     <string name="about">About</string>
     <string name="about_antox_1">With the rise of government monitoring programs, Tox provides an easy to use application that allows you to connect with friends and family without anyone else listening in.</string>
     <string name="about_antox_2">What Is Currently Working:</string>
-    <string name="about_antox_3">-Basic messaging (this does not include group chats)</string>
-    <string name="about_antox_4">-Notifications</string>
-    <string name="about_antox_5">Not Working:</string>
-    <string name="about_antox_6">-Audio/Video &amp; File Transfers</string>
+    <string name="about_antox_3">- One to one messaging</string>
+    <string name="about_antox_4">- Notifications</string>
+    <string name="about_antox_5">- File transfers</string>
+    <string name="about_antox_6">Not Working:</string>
+    <string name="about_antox_7">- Audio/Video</string>
+    <string name="about_antox_8">- Groups</string>
     <string name="title_activity_call">CallActivity</string>
     <string name="end_call">End Call</string>
     <string name="mute_call">Mute</string>
     <string name="mute_mic">Mute Mic</string>
+    <string name="profile_info_description">Get User Info</string>
 
 </resources>
